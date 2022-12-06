@@ -1,0 +1,130 @@
+{
+  "kind": "collectionType",
+  "collectionName": "apl_01s",
+  "info": {
+    "singularName": "apl-01",
+    "pluralName": "apl-01s",
+    "displayName": "APL01",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "namaLengkap": {
+      "type": "string"
+    },
+    "NIK": {
+      "type": "string"
+    },
+    "tempatLahir": {
+      "type": "string"
+    },
+    "tanggalLahir": {
+      "type": "date"
+    },
+    "jenisKelamin": {
+      "type": "enumeration",
+      "enum": [
+        "L",
+        "P"
+      ]
+    },
+    "alamat": {
+      "type": "text"
+    },
+    "nomorTelpon": {
+      "type": "string"
+    },
+    "email": {
+      "type": "email",
+      "default": "asesi@gmail.com"
+    },
+    "pendidikanTerakhir": {
+      "type": "string"
+    },
+    "namaPerusahaan": {
+      "type": "string"
+    },
+    "jabatan": {
+      "type": "string"
+    },
+    "alamatKantor": {
+      "type": "string"
+    },
+    "pekerjaan": {
+      "type": "string"
+    },
+    "skemaSertifikasi": {
+      "type": "enumeration",
+      "enum": [
+        "KKNI",
+        "Okupasi",
+        "Klaster"
+      ]
+    },
+    "tujuanAsesmen": {
+      "type": "enumeration",
+      "enum": [
+        "Sertifikat Baru",
+        "Sertifikasi Ulang"
+      ]
+    },
+    "ijazah": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    },
+    "pasFoto": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "identitas": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    },
+    "transkrip": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "files",
+        "images"
+      ]
+    },
+    "ttdAsesi": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "apl_01_approval": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::apl-01-approval.apl-01-approval",
+      "inversedBy": "apl_01"
+    },
+    "users_permissions_user": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "apl_01s"
+    }
+  }
+}
