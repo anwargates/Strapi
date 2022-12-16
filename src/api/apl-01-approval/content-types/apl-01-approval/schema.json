@@ -4,7 +4,8 @@
   "info": {
     "singularName": "apl-01-approval",
     "pluralName": "apl-01-approvals",
-    "displayName": "APL01Approval"
+    "displayName": "APL01Approval",
+    "description": ""
   },
   "options": {
     "draftAndPublish": false

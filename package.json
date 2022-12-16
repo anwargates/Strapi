@@ -9,15 +9,15 @@
     "build": "strapi build",
     "strapi": "strapi"
   },
-  "devDependencies": {},
   "dependencies": {
+    "@strapi/plugin-documentation": "^4.5.0",
     "@strapi/plugin-i18n": "4.5.0",
     "@strapi/plugin-users-permissions": "4.5.0",
     "@strapi/provider-upload-cloudinary": "4.5.0",
     "@strapi/strapi": "4.5.0",
-    "@strapi/plugin-documentation": "^4.5.0",
+    "pg": "8.7.3",
     "strapi-plugin-import-export-entries": "^1.18.0",
-    "pg": "8.7.3"
+    "strapi-plugin-populate-deep": "^1.1.2"
   },
   "author": {
     "name": "A Strapi developer"

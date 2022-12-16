@@ -15,14 +15,6 @@ module.exports = [
       },
     },
   },
-  // {
-  //   name: "strapi::cors",
-  //   config: {
-  //     // enabled: true,
-  //     // headers: "*",
-  //     origin: "http://192.168.10.106:1337",
-  //   },
-  // },
   "strapi::cors",
   "strapi::poweredBy",
   "strapi::logger",

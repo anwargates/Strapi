@@ -22,7 +22,8 @@
       "type": "string"
     },
     "tanggalLahir": {
-      "type": "date"
+      "type": "date",
+      "default": "1900-01-01"
     },
     "jenisKelamin": {
       "type": "enumeration",
@@ -38,8 +39,7 @@
       "type": "string"
     },
     "email": {
-      "type": "email",
-      "default": "asesi@gmail.com"
+      "type": "string"
     },
     "pendidikanTerakhir": {
       "type": "string"
@@ -120,11 +120,29 @@
       "target": "api::apl-01-approval.apl-01-approval",
       "inversedBy": "apl_01"
     },
-    "users_permissions_user": {
+    "event": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::event.event",
+      "inversedBy": "apl_01s"
+    },
+    "asesor": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::asesor.asesor",
+      "inversedBy": "apl_01s"
+    },
+    "user": {
       "type": "relation",
       "relation": "manyToOne",
       "target": "plugin::users-permissions.user",
       "inversedBy": "apl_01s"
+    },
+    "skema": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::skema.skema",
+      "inversedBy": "apl_01_s"
     }
   }
 }
